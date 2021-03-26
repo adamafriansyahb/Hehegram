@@ -1,0 +1,49 @@
+<%- include('../partials/header') %> 
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="container">
+        <div class="row">
+            <header class="d-flex justify-content-between py-3 rounded-top">
+                <h2><i class="fab fa-rocketchat"></i>  Hehegram</h2>
+                <div class="d-flex align-items-center">
+                    <form action="/selectRoom" method="GET">
+                        <input name="username" type="hidden" class="form-control" value="<%= username %>">
+                        <button type="submit" class="btn btn-leave mx-2"><i class="fas fa-sign-out-alt"></i></button>
+                    </form>
+                    <div>
+                        <a href="/logout" class="btn btn-danger d-flex align-items-center">Logout</a>
+                    </div>
+                </div>
+            </header>
+        </div>
+       
+        <div class="row">
+            <div class="col-md-3 col-4 chat-sidebar pb-2 py-3 bg-dark">
+                <h4><i class="fas fa-comments"></i> Room:</h4>
+                <p id="room-name"><%= roomName %></p>
+                <h4><i class="fas fa-users"></i> Users</h4>
+                <ul id="online-users"  class="px-4">
+                   
+                </ul>
+            </div>
+            <div class="chat-messages col-md-9 col-8 chat-section pb-2 py-3">
+                
+            </div>
+        </div>
+            
+        <div class="row rounded-bottom chat-form">
+            <form action="" id="chat-form">
+                <div class="input-group d-flex align-items-center py-3">
+                    <input id="message" type="text" class="form-control bg-dark" placeholder="Type something here..." autocomplete="off">
+                    <button class="btn btn-primary" type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" crossorigin="anonymous"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/main.js"></script>
+
+<%- include('../partials/footer') %>

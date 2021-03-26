@@ -1,0 +1,35 @@
+<%- include('../partials/header') %> 
+
+<div class="container container-login d-flex justify-content-center align-items-center">
+    <div class="container form-login p-3 rounded">
+        <h1 class="text-center mt-3"><i class="fab fa-rocketchat fa-2x"></i></h1>
+        <h3 class="text-center my-2">Select room</h3>
+        <div class="mt-4">
+            <form action="/" method="GET">
+                <input name="username" type="hidden" class="form-control" value="<%= user %>">
+                <div class="mb-3">
+                    <label class="form-label mb-1">Room</label>
+                    <select name="roomName" class="select-room form-select bg-dark" aria-label="Default select example">
+                        <option value="Africa">Africa</option>
+                        <option value="America">America</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Europe">Europe</option>
+                    </select>
+                </div>
+                <div class="d-flex justify-content-center mt-3 mb-3">
+                    <button class="btn btn-primary w-100">Join Chat</button>
+                </div>
+            </form>
+        </div>
+        <div class="mt-1">
+            <form action="/logout" method="GET">
+                <div class="d-flex justify-content-center mt-3 mb-3">
+                    <button class="btn btn-danger w-100">Logout</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer') %> 

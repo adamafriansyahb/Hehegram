@@ -1,0 +1,20 @@
+<% if (success_message != '') { %> 
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <%= success_message %> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %> 
+
+<% if (error_message != '') { %> 
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <%= error_message %> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
+<% if (error != '') { %> 
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Oops!</strong> <%= error %> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %> 

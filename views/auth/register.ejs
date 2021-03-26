@@ -1,0 +1,40 @@
+<%- include('../partials/header') %> 
+
+<div class="container container-login d-flex justify-content-center align-items-center">
+    <div class="container form-login p-3 rounded">
+        <h1 class="text-center mt-3"><i class="fab fa-rocketchat fa-2x"></i></h1>
+        <h3 class="text-center my-2">Register to Hehegram</h3>
+        <form action="/register" method="POST">
+            <% if (typeof errMsg !== 'undefined') { %>
+                <p class="mb-1 error-message"><%= errMsg %> </p>
+            <% } %>  
+            <div class="mb-3">
+                <label for="email" class="form-label mb-1">Email</label>
+                <input name="email" type="email" class="form-control bg-dark" id="email" placeholder="Enter your email" autocomplete="off" value="<%= typeof email != 'undefined' ? email : '' %>">
+            </div>
+            <div class="mb-3">
+                <label for="username" class="form-label mb-1">Username</label>
+                <input name="username" type="text" class="form-control bg-dark" id="username" placeholder="Enter your username" autocomplete="off" value="<%= typeof username != 'undefined' ? username : '' %>">
+            </div>
+            <div class="mb-3">
+                <label for="password1" class="form-label mb-1">Password</label>
+                <input name="password1" type="password" class="form-control bg-dark" id="password1" placeholder="Enter your password" autocomplete="off">
+                <% if (typeof passwordErrMsg !== 'undefined') { %>
+                    <p class="error-message"><%= passwordErrMsg %> </p>    
+                <% } %>  
+            </div>
+            <div class="mb-3">
+                <label for="password2" class="form-label mb-1">Confirm Password</label>
+                <input name="password2" type="password" class="form-control bg-dark" id="password2" placeholder="Retype your password" autocomplete="off">
+            </div>
+            <div class="d-flex justify-content-center mt-4 mb-3">
+                <button type="submit" class="btn btn-primary w-100">Register</button>
+            </div>
+            <div class="d-flex justify-content-center mt-2 mb-2">
+                <p class="mb-1">Already have account?<a href="/login"> Login</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include('../partials/footer') %> 

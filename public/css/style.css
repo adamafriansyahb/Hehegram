@@ -1,0 +1,96 @@
+body {
+  background-color: #151515;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #3c415c;
+}
+header h2 {
+  color: whitesmoke;
+}
+
+header .btn-leave {
+  background-color: #f7bb07;
+  color: white;
+}
+
+header .btn-leave:hover {
+  color: white;
+  background-color: #dfab0e;
+}
+
+.container-login {
+  min-height: 100vh;
+  max-width: 30rem;
+}
+
+.form-login {
+  background-color: #3c415c;
+  color: white;
+}
+
+.form-login input[type="text"] {
+  border: none;
+  color: white;
+}
+.form-login input[type="password"] {
+  border: none;
+  color: white;
+}
+.form-login input[type="email"] {
+  border: none;
+  color: white;
+}
+
+.chat-section {
+  min-height: 500px;
+  max-height: 500px;
+  overflow-y: scroll;
+  background-color: #393e46;
+}
+
+.chat-container {
+  color: white;
+}
+
+.chat-sidebar {
+  color: white;
+}
+
+.chat-sidebar {
+  overflow-y: scroll;
+}
+
+.chat-form {
+  background-color: #3c415c;
+}
+
+.chat-form input[type="text"] {
+  border: none;
+  color: white;
+}
+
+.chat-messages .message .meta {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.chat-messages .message .meta span {
+  font-weight: lighter;
+  opacity: 0.7;
+}
+
+.select-room {
+  border: none;
+  color: white;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='white' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+}
+
+.error-message {
+  color: rgb(255, 85, 85);
+}
